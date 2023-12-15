@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
 
 @Configuration
-public class JndiDataSiurceCfg 
+public class JndiDataSourceCfg 
 {
 	@Bean
 	public DataSource dataSource()
@@ -15,6 +15,6 @@ public class JndiDataSiurceCfg
 		final JndiDataSourceLookup dsLookup = 
 				new JndiDataSourceLookup();
 		dsLookup.setResourceRef(true);
-		return dsLookup.getDataSource("persistence/")
+		return dsLookup.getDataSource("persistence/springWithJpa");
 	}
 }
